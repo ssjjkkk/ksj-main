@@ -1,0 +1,10 @@
+package pdfbox_sample.test;
+
+public class PDFBox_Scanner {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

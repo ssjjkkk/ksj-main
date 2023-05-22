@@ -1,0 +1,13 @@
+package kr.or.dw.basic;
+
+public class FileIOTEst01 {
+
+	public static void main(String[] args) {
+		
+		// 파일 자료 읽기 예제
+		
+		
+
+	}
+
+}

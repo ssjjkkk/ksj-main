@@ -1,0 +1,16 @@
+package h_api;
+
+import java.util.Date;
+
+public class DateClass {
+
+	public static void main(String[] args) {
+
+		Date today = new Date();    // 현재 날짜
+		System.out.println(today);
+		
+		SimpleDateFomat sdf1 = new SimpleDateFomat();
+
+	}
+
+}

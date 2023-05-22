@@ -1,0 +1,20 @@
+package kr.or.dw.basic;
+
+public class ObjectIOTest {
+
+	public static void main(String[] args) {
+		// 객체를 파일에 저장하는 매체
+		Member mem1;
+		
+		
+
+	}
+
+}
+
+// 데이터 저장용 클래스 작성
+class Member {
+	
+	
+	
+}

@@ -1,0 +1,14 @@
+package kr.or.dw.basic;
+
+public class FileIOTEst01 {
+
+	public static void main(String[] args) {
+		
+		// 파일 자료 읽기 예제
+		
+		// 읽어올 파일을 매개변수로 받는 FileInputStream 객체 생성
+		
+
+	}
+
+}

@@ -1,0 +1,9 @@
+package kr.or.dw.controller;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+@WebServlet("/TestController.do")
+public class TestController extends HttpServlet {
+
+}

@@ -1,0 +1,5 @@
+#Mon May 15 16:53:15 KST 2023
+com.tomato.exerd.preference.PropertyPagePrefConstants.oracle10g.DROP_PRIMARY_KEY_INDEX=false
+eclipse.preferences.version=1
+com.tomato.exerd.preference.PropertyPagePrefConstants.oracle10g.USE_OWNER_PREFIX=false
+com.tomato.exerd.preference.PropertyPagePrefConstants.oracle10g.DROP_TABLE=false

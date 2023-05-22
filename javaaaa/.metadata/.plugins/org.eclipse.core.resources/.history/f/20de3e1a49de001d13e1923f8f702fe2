@@ -1,0 +1,18 @@
+package h_api;
+
+import java.util.Date;
+
+public class DateClass {
+
+	public static void main(String[] args) {
+
+		Date today = new Date();    // 현재 날짜
+		System.out.println(today);
+		
+		SimpleDateFormat sdf1 = new SimpleDateFormat("yy/mm/dd a hh:mm");
+		
+		System.out.println();
+
+	}
+
+}

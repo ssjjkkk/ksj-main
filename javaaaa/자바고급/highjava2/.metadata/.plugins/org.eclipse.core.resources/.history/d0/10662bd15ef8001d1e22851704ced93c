@@ -1,0 +1,18 @@
+package kr.or.dw.util;
+
+public class CryptoUtil {
+	
+	// byte 배열을 Hex(16진수) 문자열로 변환하는 메서드
+	public static String byteToHexString(byte[] data) {
+		StringBuffer sb = new StringBuffer();
+		for(byte b : data) {
+			// 16진수 2자리의 문자열로 만든다.
+			// (b & 0xFF) ==> 0a ==> a
+			// (b & 0xFF) + 0x100 ==> 10a
+			sb.append( Integer.toHexString((b & 0xFF) + 0x100).substring(1));
+		};
+		
+		return sb.toString();
+	}
+
+}

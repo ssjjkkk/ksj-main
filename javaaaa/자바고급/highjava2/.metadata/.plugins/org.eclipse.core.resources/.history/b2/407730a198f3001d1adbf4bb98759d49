@@ -1,0 +1,24 @@
+package kr.or.dw.member.dao;
+
+import java.util.List;
+
+import kr.or.dw.vo.MemberVO;
+
+public class MemberDaoImpl implements IMemberDao{
+	
+	private static MemberDaoImpl dao;
+	
+	public static MemberDaoImpl getInstace() {
+		if(dao == null) {
+			dao = new MemberDaoImpl();
+		}
+		return dao;
+	}
+
+	@Override
+	public List<MemberVO> getAllMember() {
+		
+		return null;
+	}
+
+}

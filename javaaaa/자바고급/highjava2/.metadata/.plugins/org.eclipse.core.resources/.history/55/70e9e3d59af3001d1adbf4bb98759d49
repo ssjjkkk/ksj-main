@@ -1,0 +1,17 @@
+package kr.or.dw.util;
+
+import java.nio.charset.Charset;
+
+import com.ibatis.sqlmap.client.SqlMapClient;
+
+public class BuildSqlMapClient {
+	
+	private static SqlMapClient smc;
+	
+	static {
+		// 1. ibatis 설정 파일을 읽어와서 실행한다. (sqlMapConfig.xml 파일)
+		// 1-1. 문자 인코딩 캐릭터 셋 설정
+		Charset charset = Charset.forName("UTF-8");
+	}
+
+}

@@ -1,0 +1,7 @@
+package kr.or.dw.member.action;
+
+import kr.or.dw.web.IAction;
+
+public class MemberInsertAction implements IAction {
+
+}

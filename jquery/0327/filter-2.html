@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>filter-2</title>
+        <script src="../jquery-3.6.4.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#btnView').on('click', function(){
+                    let name = $('#user').val("Japan");
+                    let gender = $(':checked').val();
+                    let intro = $('textarea').val('테스트입니다');
+                    let job = $(':selected').val();
+
+                    // alert(`${name}, ${gender}, ${intro}, ${job}`);
+                
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <ul>
+            <form>
+                <label for="user">이름</label>
+                <input type="text" id="user" value="korea"><br>
+                <label>성별</label>
+                <input type="radio" name="gend" id="gend" value="남자" checked> 남자
+                <input type="radio" name="gend" id="gend" value="여자"> 여자<br>
+                <label for="intro">소개</label>
+                <textarea id="intro" cols="40" rows="4"></textarea> <br>
+                <label for="work">직업</label>
+                <select id="work">
+                    <option value="programmer">프로그래머</option>
+                    <option value="progammer">프로게이머</option>
+                    <option value="whitehand">백수</option>
+                </select><br>
+                <input type="button" id="btnView" value="조사하기">
+                <input type="button" id="btnChange" value="이름변경">
+            </form>
+        </ul>        
+    </body>
+</html>

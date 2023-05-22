@@ -1,0 +1,27 @@
+package kr.or.dw.basic;
+
+import java.io.File;
+
+public class FileTest03 {
+
+	public static void main(String[] args) {
+		
+		FileTest03 test = new FileTest03();
+		File file = new File("C:/Users/admin/Documents");
+		test.displayFileList(file);
+		
+		
+		
+		
+
+	}
+	
+	public void displayFileList(File dir) {
+		
+	}
+	
+	
+	
+	
+
+}

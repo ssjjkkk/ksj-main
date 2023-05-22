@@ -1,0 +1,29 @@
+package f_oop2;
+
+public class Starcraft {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class Unit {
+	int hp; // 체력
+	final int MAX_HP; // 최대 체력
+	
+	Unit(int hp) {
+		MAX_HP = hp;
+		this.hp = hp;
+	}
+	
+}
+
+class Marine extends Unit {
+	
+	Marine() {
+		super(40);
+	}
+	
+}

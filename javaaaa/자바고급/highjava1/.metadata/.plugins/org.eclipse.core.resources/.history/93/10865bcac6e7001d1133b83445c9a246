@@ -1,0 +1,23 @@
+package kr.or.dw.basic;
+
+public class ThreadTest06 {
+
+	public static void main(String[] args) {
+		DataInputThread dit = new DataInputThread();
+
+	}
+
+}
+
+// 데이터를 입력하는 쓰레드
+class DataInputThread extends Thread {
+	// 입력 여부를 확인하기 위한 변수 선언 : 쓰레드에서 공통으로 사용할 변수
+	
+	@Override
+	public void run() {
+		
+	}
+	
+}
+
+

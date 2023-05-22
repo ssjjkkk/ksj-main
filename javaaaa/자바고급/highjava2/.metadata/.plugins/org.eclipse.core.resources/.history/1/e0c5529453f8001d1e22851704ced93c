@@ -1,0 +1,49 @@
+package kr.or.dw.user.action;
+
+import java.io.IOException;
+import java.sql.Date;
+import java.util.Date;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import kr.or.dw.user.service.IUserService;
+import kr.or.dw.user.service.UserServiceImpl;
+import kr.or.dw.user.vo.UserVO;
+import kr.or.dw.web.IAction;
+
+public class UserInsertAction implements IAction {
+
+	@Override
+	public boolean isRedirect() {
+		return true;
+	}
+
+	@Override
+	public String process(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		IUserService service = UserServiceImpl.getInstance();
+		
+		String email = req.getParameter("email");
+		String pass = req.getParameter("pass");
+		String nick = req.getParameter("nick");
+		String name = req.getParameter("name");
+		String birS = req.getParameter("bir");
+		String gender = req.getParameter("gender");
+		
+		 date = new Date();
+		
+		UserVO userVo = new UserVO();
+		userVo.setEmail(email);
+		userVo.setPass(pass);
+		userVo.setNick(nick);
+		userVo.setName(name);
+		userVo.setBir(bir);
+		userVo.setGender(gender);
+		
+		int result = service.insertUser(userVo);
+		
+		return "/user/main.jsp";
+	}
+
+}

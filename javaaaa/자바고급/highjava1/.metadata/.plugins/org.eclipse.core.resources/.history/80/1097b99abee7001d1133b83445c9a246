@@ -1,0 +1,22 @@
+package kr.or.dw.basic;
+
+public class ThreadTest03 {
+
+	public static void main(String[] args) {
+		// 쓰레드가 수행되는 시간 체크해보기
+		Thread th = new Thread(new Myrunner());
+
+	}
+
+}
+
+
+class Myrunner implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
