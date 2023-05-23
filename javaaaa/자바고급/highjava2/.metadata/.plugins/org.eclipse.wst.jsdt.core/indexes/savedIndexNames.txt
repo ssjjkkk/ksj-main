@@ -6,7 +6,6 @@ INDEX VERSION 1.4+C:\ksj-main\javaaaa\자바고급\highjava2\.metadata\.plugins\org.
 978394009.index
 3545728697.index
 2740472355.index
-1002025560.index
 452947191.index
 3409976117.index
 3546423016.index

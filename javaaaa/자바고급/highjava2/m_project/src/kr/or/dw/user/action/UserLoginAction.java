@@ -34,6 +34,8 @@ public class UserLoginAction implements IAction {
 		String cpass = "";
 		try {
 			cpass = CryptoUtil.sha512(pass);
+			System.out.println(pass);
+			
 		} catch (NoSuchAlgorithmException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
