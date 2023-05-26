@@ -1,7 +1,0 @@
-package kr.or.dw.member.action;
-
-import kr.or.dw.web.IAction;
-
-public class MemberDeleteAction implements IAction{
-
-}

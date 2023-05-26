@@ -19,21 +19,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Theme style -->
   <link rel="stylesheet" href="<%=request.getContextPath() %>/assets/dist/css/adminlte.min.css">
   <script src="<%= request.getContextPath()%>/assets/plugins/jquery/jquery.js"></script>
+	<%
+		UserVO userVo = (UserVO)session.getAttribute("userVO");
+		
+		if(userVo != null) {
+	%>
   <script type="text/javascript">
   	$(function () {
-		<%
-			UserVO userVo = (UserVO)session.getAttribute("userVO");
-		
-			if(userVo != null) {
-		%>
-				$('#loginCheck').text('Log Out');
-				$('#loginCheck').attr('href', '<%= request.getContextPath()%>/user/userLogout.do');
-				$('#signUp').find('p').text('profile');
-				$('#signUp').find('i').attr('class', 'nav-icon fas fa-solid fa-id-card');
-				$('#signUp').attr('href', '<%= request.getContextPath()%>/user/myPage.do');
-		<%} %>
-	});
+			$('#loginCheck').text('Log Out');
+			$('#loginCheck').attr('href', '<%= request.getContextPath()%>/user/userLogout.do');
+			$('#signUp').find('p').text('profile');
+			$('#signUp').find('i').attr('class', 'nav-icon fas fa-solid fa-id-card');
+			$('#signUp').attr('href', '<%= request.getContextPath()%>/user/myPage.do');
+	})
   </script>
+	<%} %>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -53,6 +53,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="<%= request.getContextPath() %>/user/userLoginForm.do" class="nav-link" id="loginCheck">Log In</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="<%= request.getContextPath() %>/board/boardMain.do" class="nav-link">Board</a>
       </li>
     </ul>
 

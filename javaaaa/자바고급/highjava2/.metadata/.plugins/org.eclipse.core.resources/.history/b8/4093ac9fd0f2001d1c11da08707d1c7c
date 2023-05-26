@@ -1,5 +1,0 @@
-package kr.or.dw.member.service;
-
-public interface IMemberService {
-
-}

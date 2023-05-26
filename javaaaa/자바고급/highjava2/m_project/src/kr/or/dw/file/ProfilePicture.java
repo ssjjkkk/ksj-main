@@ -19,6 +19,7 @@ public class ProfilePicture implements IAction{
 
 	@Override
 	public boolean isRedirect() {
+		// TODO Auto-generated method stub
 		return false;
 	}
 
@@ -26,9 +27,9 @@ public class ProfilePicture implements IAction{
 	public String process(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		
 		HttpSession session = req.getSession();
-		UserVO userVo = (UserVO)session.getAttribute("userVO");
-		int user_no = userVo.getUser_no();
-		String picFoldName = String.valueOf(user_no);
+		UserVO vo = (UserVO) session.getAttribute("userVO");
+		int user_no = vo.getUser_no();
+		String picFoldName = "" + user_no;
 		String realPath = "C:/upload/userProfile/" + picFoldName;
 		
 		String fileName = "";
@@ -41,12 +42,12 @@ public class ProfilePicture implements IAction{
 		MultipartRequest multi = new MultipartRequest(req, realPath, 100*1024*1024, "utf-8");
 		fileName = multi.getFilesystemName("selfie");
 		
-		userVo.setPic_path(picFoldName + "/" + fileName);
+		vo.setPic_path(picFoldName + "/" + fileName);
 		
 		IUserService service = UserServiceImpl.getInstance();
-		service.updateUserPicPath(userVo);
+		service.updateUserPicPath(vo);
 		
-		req.setAttribute("vo", userVo);
+		req.setAttribute("vo", vo);
 		
 		return "/user/myPageModResJson.jsp";
 	}
