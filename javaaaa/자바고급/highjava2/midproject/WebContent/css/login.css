@@ -1,0 +1,213 @@
+@charset "utf-8";
+
+body {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    color: #17191d;
+    line-height: normal;
+    overflow-y: scroll;
+    font: 12px malgun gothic,"sans serif"
+}
+
+button,input,input[type=password],input[type=text] {
+    font: 12px malgun gothic,"sans serif";
+    color: #17191d;
+    background-color: transparent
+}
+
+body, button, input {
+    color: #737881;
+    font: 12px malgun gothic,"sans serif";
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a {
+    color: #737881;
+    text-decoration: none;
+}
+
+.Login {
+    display: block;
+    width: 100%;
+}
+
+.Login .logo-link {
+    display: block;
+    width: 300px;
+    margin: 0 auto 45px;
+    color: #d63338;
+    font: 1.75rem 'SBAggroB';
+    font-weight: 500;
+    text-align: center;
+}
+.Login .logo {
+    width: 300px;
+}
+
+.Login .loginMsg,.Login .loginMsg {
+    display: none;
+    min-height: 28px;
+    padding: 6px 12px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -.6px;
+    text-align: center;
+    color: #fff;
+    background-color: #ff6060
+}
+
+.inputMsg {
+    display: none;
+    height: 28px;
+    margin-top: -6px;
+    font-weight: 700;
+    letter-spacing: -.6px;
+    text-align: left;
+    color: #ff6060
+}
+
+#wrapper .showMsg {
+    display: block
+}
+
+#wrapper {
+    max-width: 492px;
+    min-width: 360px;
+    min-height: 100%;
+    min-height: 100vh;
+    padding: 150px 16px 200px;
+    margin: 0 auto
+}
+
+#contents,#wrapper {
+    position: relative
+}
+
+.LoginLayout {
+    padding-top: 60px
+}
+
+.otpLogin,.qrLogin {
+    padding-top: 40px
+}
+
+.id,.otppass,.pass {
+    height: 68px
+}
+
+.id input,.otppass input,.pass input {
+    width: 100%;
+    height: 56px;
+    padding: 18px 12px;
+    border: 1px solid #e5e8eb;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    outline: 0;
+    transition: border-color .15s linear
+}
+
+.id input:focus,.otppass input:focus,.pass input:focus {
+    border: 2px solid #d63338;
+    padding: 17px 11px;
+    transition: border-color .2s linear
+}
+
+.id input::placeholder,.otppass input::placeholder,.pass input::placeholder {
+    font-weight: 400;
+    color: #c7c8cc;
+    opacity: 1
+}
+
+.id input:-ms-input-placeholder,.otppass input:-ms-input-placeholder,.pass input:-ms-input-placeholder {
+    font-weight: 400;
+    color: #c7c8cc
+}
+
+.id input::-ms-input-placeholder,.otppass input::-ms-input-placeholder,.pass input::-ms-input-placeholder {
+    font-weight: 400;
+    color: #c7c8cc
+}
+
+.btLogin button {
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    font-family: NEXON Gothic Bold;
+    color: #fff;
+    background-color: #17191d;
+    transition: all .15s linear
+}
+
+.btLogin button:active,.btLogin button:hover {
+    outline: 0;
+    background-color: #d63338;
+    transition: all .2s linear
+}
+
+.otpLogin .btLogin {
+    padding-top: 18px
+}
+
+.loginMenu {
+    position: relative;
+    height: 40px;
+    padding-top: 12px;
+    display: block;
+}
+
+.loginMenu a {
+    font-weight: 700;
+    letter-spacing: -.6px;
+    color: #737881;
+    margin-right: 8px;
+    transition: all .15s linear;
+    vertical-align: baseline
+}
+
+.loginMenu a:hover {
+    color: #d63338;
+    transition: all .2s linear
+}
+
+.loginMenu .sec {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    margin-right: 0;
+    color: #07f
+}
+
+.loginMenu .sec:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0 2px -3px 0;
+    background: url(https://rs.nxfs.nexon.com/nxlogin/images/set_login.svg) no-repeat 0 -600px
+}
+
+.loginMenu .sec:hover {
+    text-decoration: underline
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-width: 328px;
+    height: 80px;
+    padding: 32px 0 0;
+    text-align: center
+}
+
+.footer p {
+    font-size: 11px;
+    color: #9fa1a7
+}

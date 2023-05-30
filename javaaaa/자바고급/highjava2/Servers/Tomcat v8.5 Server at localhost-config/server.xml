@@ -155,7 +155,7 @@
 
       
       <Context docBase="c:/upload/userProfile/" path="/profilePath/" reloadable="true"/>
-      <Context docBase="midProject" path="/" reloadable="true" source="org.eclipse.jst.jee.server:midProject"/></Host>
+      <Context docBase="midproject" path="/" reloadable="true" source="org.eclipse.jst.jee.server:midproject"/></Host>
     </Engine>
   </Service>
 </Server>
