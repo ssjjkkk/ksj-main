@@ -1,3 +1,4 @@
+<%@page import="kr.or.dw.user.vo.UserVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -18,6 +19,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Theme style -->
   <link rel="stylesheet" href="<%=request.getContextPath() %>/assets/dist/css/adminlte.min.css">
   <script src="<%= request.getContextPath()%>/assets/plugins/jquery/jquery.js"></script>
+	<%
+		UserVO userVo = (UserVO)session.getAttribute("userVO");
+		
+		if(userVo != null) {
+	%>
+  <script type="text/javascript">
+  	$(function () {
+			$('#loginCheck').text('Log Out');
+			$('#loginCheck').attr('href', '<%= request.getContextPath()%>/user/userLogout.do');
+			$('#signUp').find('p').text('profile');
+			$('#signUp').find('i').attr('class', 'nav-icon fas fa-solid fa-id-card');
+			$('#signUp').attr('href', '<%= request.getContextPath()%>/user/myPage.do');
+	})
+  </script>
+	<%} %>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -30,13 +46,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="<%= request.getContextPath()%>/main.do" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="<%= request.getContextPath() %>/user/userLoginForm.do" class="nav-link">Log In</a>
+        <a href="<%= request.getContextPath() %>/user/userLoginForm.do" class="nav-link" id="loginCheck">Log In</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="<%= request.getContextPath() %>/board/boardMain.do" class="nav-link">Board</a>
       </li>
     </ul>
 
@@ -176,10 +195,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="<%=request.getContextPath() %>/assets/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        
+        <%
+        	String src = "/profilePath/default/default_profile.png";
+        	String nick = "환영합니다.";
+        	String nickA = "#";
+        	if(userVo != null) {
+        		src = "/profilePath/" + userVo.getPic_path();
+        		nick = userVo.getNick();
+        		nickA = request.getContextPath() + "/user/myPage.do";
+        	}
+        %>
+        
+        
+          <img src="<%= src%>" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="<%= nickA%>" class="d-block"><%= nick%></a>
         </div>
       </div>
 
@@ -233,7 +265,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
           </li>
           <li class="nav-item">
-            <a href="<%= request.getContextPath() %>/user/joinForm.do" class="nav-link">
+            <a href="<%= request.getContextPath() %>/user/joinForm.do" class="nav-link" id="signUp">
               <i class="nav-icon fas fa-solid fa-user-plus"></i>
               <p>
                 Sign Up
@@ -258,7 +290,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="<%= request.getContextPath()%>/main.do">Home</a></li>
               <li class="breadcrumb-item active"><%= request.getAttribute("title_nm")%> Page</li>
             </ol>
           </div><!-- /.col -->

@@ -9,4 +9,6 @@ public interface IUserService {
 	public int insertUser(UserVO userVo);
 
 	public UserVO loginUser(String email);	// 회원정보를 조회하는 메서드
+
+	public Object updateUserPicPath(UserVO userVo);	// 회원의 프로필사진 경로를 수정하는 메서드
 }

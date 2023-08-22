@@ -1,0 +1,245 @@
+@charset "utf-8";
+
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    background: #f6f6f6;
+}
+.profile-header {
+    position: relative;
+    min-height: 275px;
+    height: 275px;
+    background: #333 url(https://ssl.pstatic.net/static/nng/resource/p/static/media/img-profile-bg.dd95c640.png) no-repeat 50%/auto 100%;
+    text-align: center;
+}
+.profile-header .container .profile-info-wrap {
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.profile-header .container .profile-info {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    position: absolute;
+    left: 249px;
+    height: 100%;
+    padding: 86px 0 35px;
+    color: #fff;
+}
+.profile-header .container .profile-info .profile-image-area {
+    display: inline-block;
+    position: relative;
+    margin-right: 32px;
+    padding-left: 3px;
+    vertical-align: top;
+}
+.profile-header .container .profile-info .profile-image-area .style-profile {
+    position: relative;
+    border-radius: 50%;
+    margin: 0 auto;
+    -webkit-box-shadow: 0 20px 30px 0 rgba(0,0,0,.4);
+    box-shadow: 0 20px 30px 0 rgba(0,0,0,.4);
+    background-color: #333;
+}
+.profile-header .container .profile-info .profile-image-area .style-profile .image-edit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    border: 2px solid rgb(51 51 51 / 75%);
+    color: #333;
+    cursor: pointer;
+    z-index: 2;
+}
+.profile-header .container .profile-info .profile-image-area .style-profile .image-edit .bi {
+    font-size: 33px;
+    position: absolute;
+    top: -2px;
+    left: -0.5px;
+}
+.profile-header .container .profile-info .profile-image-area .style-profile .my-profile {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.profile-header .container .profile-info .profile-image-area .style-profile .my-profile:after {
+    position: absolute;
+    top: -3px;
+    bottom: -3px;
+    right: -3px;
+    left: -3px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    content: "";
+}
+.profile-header .container .profile-info .profile-image-area .style-profile .my-profile .label-profile {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    z-index: 1;
+}
+.profile-header .container .profile-info .profile-image-area .style-profile .my-profile img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    vertical-align: top;
+}
+.profile-header .container .profile-name {
+    text-align: left;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 120px;
+}
+.profile-header .container .profile-name .profile-nickname {
+    font-size: 34px;
+    line-height: 34px;
+    font-weight: 400;
+    text-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px, rgba(0, 0, 0, 0.2) 0px 1px 1px;
+    font-family: "Sandoll Nemony2", "Apple SD Gothic NEO", "Helvetica Neue", Helvetica, 나눔고딕, NanumGothic, "Malgun Gothic", "맑은 고딕", 굴림, gulim, 새굴림, "noto sans", 돋움, Dotum, sans-serif;
+}
+.profile-header .container .profile-name .profile-userid {
+    font-size: 17px;
+    letter-spacing: -.3px;
+    text-shadow: 0 0 10px rgba(0,0,0,.3), 0 1px 2px rgba(0,0,0,.2);
+    color: hsla(0,0%,100%,.8);
+}
+.profile-header .container .profile-name .profile-introduce {
+    margin-top: 12px;
+    font-size: 15px;
+    letter-spacing: -.3px;
+    line-height: 19px;
+    font-weight: 500;
+    text-shadow: 0 0 10px rgba(0,0,0,.3), 0 1px 2px rgba(0,0,0,.2);
+    color: hsla(0,0%,100%,.6);
+}
+.profile-header .container .profile-btn {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.profile-header .container .profile-btn .btn-profile {
+    padding: 10px 16px;
+    border: 1px solid hsla(0,0%,100%,.3);
+    border-radius: 18px;
+    vertical-align: top;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 700;
+    background-color: transparent;
+    color: #fff;
+}
+.profile-header .container .profile-btn .btn-profile:hover {
+    background-color: rgba(0,0,0,.08);
+}
+.profile-wrapper {
+    margin: 30px 0;
+    min-height: 400px;
+}
+.profile-wrapper .side,
+.profile-wrapper .content {
+    position: relative;
+    background: #fff;
+    margin-bottom: 1.5rem;
+    padding: 15px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 2px 30px 0 rgba(0,0,0,.06);
+    box-shadow: 0 2px 30px 0 rgba(0,0,0,.06);
+}
+.profile-wrapper .side .btn {
+    text-align: left;
+    padding: 20px 30px;
+    border-radius: 8px;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    width: 100%;
+    margin-top: 10px;
+}
+.profile-wrapper .side .btn:first-child {
+    margin-top: 0;
+}
+.profile-wrapper .side .btn .bi {
+    margin-right: 10px;
+}
+.profile-wrapper .side .btn-profile {
+    background-color: #333;
+    color: #fff;
+}
+.profile-wrapper .side .btn-activity {
+    background-color: #f5f5f5;
+    color: #333;
+}
+.profile-wrapper .user-activity-wrap {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    margin-bottom: 30px;
+}
+.profile-wrapper .user-activity-wrap .user-activity {
+    background-color: #fff;
+    -webkit-transition: .5s;
+    transition: .5s;
+    padding: 43px 30px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 2px 30px 0 rgba(0,0,0,.06);
+    box-shadow: 0 2px 30px 0 rgba(0,0,0,.06);
+}
+.profile-wrapper .user-activity-wrap .user-activity .icon {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    flex-basis: 60px;
+    text-align: right;
+}
+.profile-wrapper .user-activity-wrap .user-activity .icon i {
+    position: absolute;
+    top: -30%;
+    left: 0;
+    font-size: 60px;
+}
+.profile-wrapper .user-activity-wrap .user-activity .count_content {
+    margin-left: 30px;
+    flex-basis: 50%;
+    text-align: left;
+}
+.profile-wrapper .user-activity-wrap .user-activity h3 {
+    font-size: 30px;
+    margin-top: 8px;
+    margin-bottom: 2px;
+    font-weight: 600;
+    -webkit-transition: .5s;
+    transition: .5s;
+    color: #2e4765;
+    font-family: 'Nanum Gothic';
+    line-height: 1;
+}
+.profile-wrapper .user-activity-wrap .user-activity p {
+    -webkit-transition: .5s;
+    transition: .5s;
+    font-size: 19px;
+    font-weight: 500;
+    color: #707070;
+    font-family: 'Nanum Gothic';
+    line-height: 1;
+}

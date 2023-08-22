@@ -1,6 +1,0 @@
-package kr.or.dw.user.service;
-
-public interface IUserService {
-
-	public String getUserNick(String nick);	// 닉네임을 조회하는 메서드
-}

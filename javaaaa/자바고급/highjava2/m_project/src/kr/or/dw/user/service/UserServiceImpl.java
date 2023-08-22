@@ -34,6 +34,13 @@ public class UserServiceImpl implements IUserService {
 		// TODO Auto-generated method stub
 		return dao.loginUser(email);
 	}
+
+	@Override
+	public Object updateUserPicPath(UserVO userVo) {
+		// TODO Auto-generated method stub
+		return dao.updateUserPicPath(userVo);
+		
+	}
 	
 	
 
