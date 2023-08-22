@@ -1,0 +1,59 @@
+1685924583945	Copy file
+1685924656535	Copy compilation unit
+1685924722001	Copy compilation unit
+1685925767116	Copy compilation unit
+1685925861440	Copy file
+1685926705019	Copy compilation unit
+1685926717602	Rename type 'FontentInsertAction'
+1685929348198	Copy compilation unit
+1685933361661	Delete element
+1686096741648	Copy compilation unit
+1686097256538	Copy file
+1686097392256	Rename resource 'memberLoginResult.jsp'
+1686097400396	Rename resource 'userBenResult.jsp'
+1686097410605	Copy file
+1686098333373	Copy compilation unit
+1686098344997	Rename type 'MemberProfileAction'
+1686098366235	Rename type 'AdminProfileAction'
+1686102476190	Delete element
+1686102533914	Copy compilation units
+1686102537917	Copy compilation units
+1686102584839	Rename compilation unit 'IMemberDao.java'
+1686102598094	Rename type 'MemberDaoImpl'
+1686102607478	Rename type 'IMemberService'
+1686102616100	Rename type 'MemberServiceImpl'
+1686104923183	Delete element
+1686105007635	Rename resource 'image_upload.php'
+1686105014593	Rename resource 'write.php'
+1686105019940	Rename resource 'game.php'
+1686105024573	Rename resource 'board.php'
+1686105030837	Rename resource '_tail.php'
+1686105037099	Rename resource '_head.php'
+1686107210127	Copy compilation units
+1686107214110	Copy compilation units
+1686107240238	Rename type 'IMemberService'
+1686107251039	Rename type 'MemberServiceImpl'
+1686107259886	Rename type 'IMemberDao'
+1686107267328	Rename type 'MemberDaoImpl'
+1686107301504	Rename type 'ILoungeService'
+1686107307038	Rename type 'LoungeServiceImpl'
+1686107312804	Rename type 'ILoungeDao'
+1686107318685	Rename type 'LoungeDaoImpl'
+1686107339666	Rename type 'IRankingService'
+1686107345517	Rename type 'RankingServiceImpl'
+1686107350593	Rename type 'IRankingDao'
+1686107355844	Rename type 'RankingDaoImpl'
+1686109139789	Copy file
+1686114641725	Rename type 'LoungeMainAction'
+1686117664746	Copy file
+1686118217111	Copy compilation unit
+1686118229174	Rename type 'GameVO'
+1686122565068	Rename type 'boardViewAction'
+1686191838195	Delete element
+1686272351312	Copy compilation unit
+1686272395297	Rename type 'nickCheckAction'
+1686273494513	Copy compilation unit
+1686277048981	Copy compilation unit
+1686277102040	Rename type 'ReplyAction'
+1686280915894	Copy file
+1686280978914	Rename resource 'reply_ajax.jsp'

@@ -1,0 +1,356 @@
+@charset "utf-8";
+
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #efefef;
+}
+header.gnb {
+    border-bottom: 0!important;
+}
+.customer {
+    background: #fff;
+    border-bottom: 1px solid #dde1e5;
+}
+.customer ul.tablist {
+    
+}
+.customer ul.tablist li {
+    float: left;
+    width: 25%;
+    border-bottom: 3px solid #fff;
+}
+.customer ul.tablist li:hover,
+.customer ul.tablist li.active {
+    border-bottom: 3px solid #333;
+    background: #fbfbfb;
+}
+.customer ul.tablist a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 20px 0;
+    text-align: center;
+}
+.notice-wrapper {
+    margin: 30px 0;
+}
+.notice-wrapper .table-list {
+    padding: 15px;
+    min-height: 300px;
+    background: #fff;
+    border-radius: 16px;
+    -webkit-box-shadow: 0 6px 20px 0 rgba(0,0,0,.1);
+    box-shadow: 0 6px 20px 0 rgba(0,0,0,.1);
+}
+.notice-wrapper .table-list {
+    z-index: 1;
+    margin-top: 1px;
+    padding: 15px 20px;
+    position: relative;
+}
+.notice-wrapper .table-list .list {
+    border-top: 1px solid #333;
+    list-style: none;
+    position: relative;
+    margin: 0 0 30px;
+    padding: 0;
+}
+.notice-wrapper .table-list .list .dep1 {
+    position: relative;
+    min-height: 70px;
+    border-bottom: 1px solid #e2e2e6;
+    transition: all 0.3s;
+    zoom: 1;
+}
+.notice-wrapper .table-list .list .dep1:hover,
+.notice-wrapper .table-list .list .dep1.on {
+    background: #fbfbfb;
+}
+.notice-wrapper .table-list .list .dep1 .leftInfo {
+    float: left;
+    width: 120px;
+    line-height: 70px;
+    font-size: 18px;
+    color: #232323;
+    vertical-align: middle;
+}
+.notice-wrapper .table-list .list .dep1 .leftInfo .sort {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 70px;
+    text-align: center;
+    font-weight: 400;
+}
+.notice-wrapper .table-list .list .dep1 .titInfo {
+    position: relative;
+    padding: 23px 0 0 30px;
+}
+.notice-wrapper .table-list .list .dep1 .tit a {
+    display: inline-block;
+    color: #636363;
+    font-size: 18px;
+    line-height: normal;
+    max-width: 810px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+}
+.notice-wrapper .table-list .list .dep1 .tit .ico {
+    margin: 0 0 0 5px;
+    vertical-align: -7px;
+}
+.notice-wrapper .table-list .list .dep1 .etc {
+    position: absolute;
+    right: 0px;
+    top: 23px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #999999;
+}
+.notice-wrapper .table-list .list .dep1 .etc li {
+    margin-right: 15px;
+    float: left;
+    border-bottom: 0;
+}
+.notice-wrapper .table-list .list .dep1 .etc li span {
+    padding: 0 1px;
+    display: inline-block;
+}
+.notice-wrapper .table-list .list .dep1 .etc li .ico {
+    vertical-align: 1px;
+}
+.notice-wrapper .table-list li .not_table {
+    width: 150px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.notice-wrapper .table-paging {
+    display: block;
+    padding: 30px 0;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.notice-wrapper .table-paging .position-right {
+    position: absolute;
+    right: 15px;
+    top: 0px;
+}
+.notice-wrapper .table-paging ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+.notice-wrapper .table-paging li {
+    margin: 0 2px;
+    float: left;
+}
+.notice-wrapper .table-paging li a {
+    display: inline-block;
+    min-width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #9b9b9b;
+    vertical-align: middle;
+    font-size: 22px;
+    font-weight: 300;
+    background: none;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+.notice-wrapper .table-paging li.on a,
+.notice-wrapper .table-paging li a:hover {
+    color: #fff;
+    background: #303030;
+}
+.notice-wrapper .table-paging .dir {
+    display: inline-block;
+    text-indent: -9999px;
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s;
+}
+.notice-wrapper .table-paging .dir:after {
+    width: 100%;
+    height: 100%;
+    display: block;
+    content: '';
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.notice-wrapper .table-paging .dir:hover:after {
+    opacity: 1;
+}
+.notice-wrapper .table-paging .first {
+    margin-right: 4px;
+    background: url(https://ssl.nexon.com/s2/game/closers/site_renewal2020/common/btn/btn_first_default.png) no-repeat;
+}
+.notice-wrapper .table-paging .first:after {
+    background: url(https://ssl.nexon.com/s2/game/closers/site_renewal2020/common/btn/btn_first_over.png) no-repeat;
+}
+.notice-wrapper .table-paging .prev {
+    width: 60px;
+    background: url(https://ssl.nexon.com/s2/game/closers/site_renewal2020/common/btn/btn_prev_default.png) no-repeat;
+}
+.notice-wrapper .table-paging .prev:after {
+    background: url(https://ssl.nexon.com/s2/game/closers/site_renewal2020/common/btn/btn_prev_over.png) no-repeat;
+}
+.notice-wrapper .table-paging .next {
+    margin-right: 4px;
+    width: 60px;
+    background: url(https://ssl.nexon.com/s2/game/closers/site_renewal2020/common/btn/btn_next_default.png) no-repeat;
+}
+.notice-wrapper .table-paging .next:after {
+    background: url(https://ssl.nexon.com/s2/game/closers/site_renewal2020/common/btn/btn_next_over.png) no-repeat;
+}
+.notice-wrapper .table-paging .last {
+    background: url(https://ssl.nexon.com/s2/game/closers/site_renewal2020/common/btn/btn_last_default.png) no-repeat;
+}
+.notice-wrapper .table-paging .last:after {
+    background: url(https://ssl.nexon.com/s2/game/closers/site_renewal2020/common/btn/btn_last_over.png) no-repeat;
+}
+.board-view {
+    padding: 15px;
+    background: #fff;
+    border-radius: 16px;
+    -webkit-box-shadow: 0 6px 20px 0 rgba(0,0,0,.1);
+    box-shadow: 0 6px 20px 0 rgba(0,0,0,.1);
+}
+.board-view .phead {
+    align-items: center;
+    border-bottom: 4px solid #1e1e1e;
+    box-sizing: border-box;
+    display: flex;
+    min-height: 94px;
+    position: relative;
+}
+.board-view .phead:after {
+    background-color: #ce330e;
+    bottom: -4px;
+    content: "";
+    display: block;
+    height: 4px;
+    left: 0;
+    position: absolute;
+    width: 60px;
+}
+.board-view .title {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -.4px;
+    line-height: 34px;
+    max-width: 85%;
+    padding: 14px 0;
+}
+.board-view .right {
+    margin-left: auto;
+    text-align: right;
+}
+.board-view .category {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+.board-view .date {
+    font-size: 15px;
+    font-weight: 300;
+}
+.board-view .pbody {
+    word-wrap: break-word;
+    font-size: 16px;
+    font-weight: 300!important;
+    line-height: 34px;
+    padding: 35px 20px 100px;
+    position: relative;
+    word-break: keep-all;
+}
+.board-view .btnArea {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    border-bottom: 2px solid #303030;
+}
+.board-view .btnArea .sns {
+    position: absolute;
+    right: 0;
+    bottom: 22px;
+}
+.board-view .btnArea .sns li {
+    margin-right: 8px;
+    float: left;
+    width: 48px;
+    height: 48px;
+    background: url(https://ssl.nexon.com/s2/game/closers/site_renewal2020/common/spr/spr_sns_default.png) no-repeat;
+}
+.board-view .btnArea .sns li a {
+    display: block;
+    text-indent: -9999px;
+    background: url(https://ssl.nexon.com/s2/game/closers/site_renewal2020/common/spr/spr_sns_over.png) no-repeat;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.board-view .btnArea .sns li a:hover {
+    opacity: 1;
+}
+.board-view .btnArea .sns li a {
+    display: block;
+    text-indent: -9999px;
+    width: 100%;
+    height: 100%;
+}
+.board-view .btnArea .sns li.link,
+.board-view .btnArea .sns li.link a {
+    background-position: 0 0;
+}
+.board-view .btmBtns {
+    padding: 15px 0 100px;
+    position: relative;
+    border: 0;
+    display: block;
+}
+.board-view .btmBtns li {
+    float: left;
+    margin: 15px 15px;
+}
+.board-view .btmBtns li:first-child {
+    margin-left: 0;
+}
+.board-view .btmBtns li:last-child {
+    margin-right: 0;
+}
+.board-view .btmBtns li a {
+    background: #ce330e;
+    color: #fff;
+    padding: 9px 20px;
+    font-size: 16px;
+    vertical-align: baseline;
+    border-radius: 0;
+    text-decoration: none;
+}
+.board-view .btn-white-primary {
+    background: #ce330e;
+    color: #fff;
+    padding: 7px 12px;
+    font-size: 16px;
+    vertical-align: baseline;
+    border-radius: 0;
+}
+.board-view .btn-white-primary:hover {
+    background: #b73111;
+    color: #fff;
+}

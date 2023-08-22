@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\kksj\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3828997757.index
+3745804228.index
+2723323231.index
+3545728697.index
+87433063.index
+4238186276.index
+3784198564.index

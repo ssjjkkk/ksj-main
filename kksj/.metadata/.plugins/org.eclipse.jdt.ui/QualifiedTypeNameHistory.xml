@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="com.oreilly.servlet.MultipartRequest"/>
+    <fullyQualifiedTypeName name="kr.or.dw.admin.dao.IAdminDao"/>
+    <fullyQualifiedTypeName name="kr.or.dw.admin.dao.AdminDaoImpl"/>
+    <fullyQualifiedTypeName name="kr.or.dw.customer.dao.ICustomerDao"/>
+    <fullyQualifiedTypeName name="kr.or.dw.customer.dao.CustomerDaoImpl"/>
+    <fullyQualifiedTypeName name="kr.or.dw.util.PaginationUtil"/>
+    <fullyQualifiedTypeName name="kr.or.dw.customer.vo.NoticeVO"/>
+    <fullyQualifiedTypeName name="kr.or.dw.customer.service.ICustomerService"/>
+    <fullyQualifiedTypeName name="kr.or.dw.customer.service.CustomerServiceImpl"/>
+    <fullyQualifiedTypeName name="kr.or.dw.customer.vo.FaqVO"/>
+    <fullyQualifiedTypeName name="kr.or.dw.admin.service.AdminServiceImpl"/>
+    <fullyQualifiedTypeName name="kr.or.dw.ranking.dao.RankingDaoImpl"/>
+    <fullyQualifiedTypeName name="kr.or.dw.ranking.service.IRankingService"/>
+    <fullyQualifiedTypeName name="kr.or.dw.ranking.service.RankingServiceImpl"/>
+    <fullyQualifiedTypeName name="kr.or.dw.lounge.dao.ILoungeDao"/>
+    <fullyQualifiedTypeName name="kr.or.dw.lounge.dao.LoungeDaoImpl"/>
+    <fullyQualifiedTypeName name="kr.or.dw.ranking.dao.IRankingDao"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="kr.or.dw.member.vo.MemberVO"/>
+    <fullyQualifiedTypeName name="kr.or.dw.member.service.IMemberService"/>
+    <fullyQualifiedTypeName name="kr.or.dw.member.service.MemberServiceImpl"/>
+    <fullyQualifiedTypeName name="kr.or.dw.admin.service.IAdminService"/>
+    <fullyQualifiedTypeName name="kr.or.dw.lounge.vo.LoungeVO"/>
+    <fullyQualifiedTypeName name="kr.or.dw.lounge.vo.ReplyVO"/>
+    <fullyQualifiedTypeName name="kr.or.dw.lounge.vo.LikeVO"/>
+    <fullyQualifiedTypeName name="kr.or.dw.lounge.vo.GuserVO"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="kr.or.dw.web.IAction"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="kr.or.dw.lounge.service.ILoungeService"/>
+    <fullyQualifiedTypeName name="kr.or.dw.lounge.service.LoungeServiceImpl"/>
+    <fullyQualifiedTypeName name="kr.or.dw.ranking.vo.GameVO"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="kr.or.dw.member.vo.GBookVO"/>
+</qualifiedTypeNameHistroy>

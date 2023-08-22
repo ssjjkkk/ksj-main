@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+   PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+   "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="customer">
+   
+   <select id="selectNoticeCount" resultClass="int">
+      SELECT COUNT(*) cnt
+        FROM notice
+       WHERE gb_del = 'N'      
+   </select>
+   
+   <select id="selectNoticeList" parameterClass="Map" resultClass="noticeVo">
+      SELECT n_no
+           ,n_title
+           ,n_content
+           ,n_wdt
+           ,b.nick
+           ,img_url
+        FROM (
+            SELECT *
+              FROM (
+                    SELECT rownum rnum, v1.*
+                    FROM (
+                          SELECT *
+                          FROM notice
+                         WHERE gb_del = 'N'
+                         ORDER BY n_no DESC
+                          ) v1
+                   WHERE rownum <![CDATA[ <= ]]> #end#
+                    ) v2
+             WHERE rnum <![CDATA[ >= ]]> #start#
+            ) b ,t_user u
+       WHERE b.nick = u.nick
+   </select>
+   
+   <select id="selectNoticeView" parameterClass="int" resultClass="noticeVo">
+	   SELECT *
+	     FROM notice
+	    WHERE gb_del = 'N'
+	      AND n_no = #n_no#
+   </select>
+   
+   <select id="selectFSList" parameterClass="String" resultClass="faqVo">
+	   SELECT *
+	     FROM faq
+	    WHERE gb_del = 'N'
+	      AND f_title LIKE '%'||#faqSearch#||'%'
+	    UNION
+	   SELECT *
+	     FROM faq
+	    WHERE gb_del = 'N'
+	      AND f_content LIKE '%'||#faqSearch#||'%'
+   </select>
+</sqlMap>

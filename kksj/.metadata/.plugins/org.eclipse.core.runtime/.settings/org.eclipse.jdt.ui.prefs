@@ -1,0 +1,20 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.io.File"><rhs name\="java.io.File"/></lhs><lhs name\="com.oreilly.servlet.MultipartRequest"><rhs name\="com.oreilly.servlet.MultipartRequest"/></lhs><lhs name\="kr.or.dw.member.service.IMemberService"><rhs name\="kr.or.dw.member.service.MemberServiceImpl"/></lhs><lhs name\="kr.or.dw.admin.service.IAdminService"><rhs name\="kr.or.dw.admin.service.AdminServiceImpl"/></lhs><lhs name\="kr.or.dw.customer.service.ICustomerService"><rhs name\="kr.or.dw.customer.service.CustomerServiceImpl"/></lhs><lhs name\="java.util.Map"><rhs name\="java.util.HashMap"/></lhs><lhs name\="kr.or.dw.customer.vo.NoticeVO"><rhs name\="kr.or.dw.customer.vo.NoticeVO"/></lhs><lhs name\="kr.or.dw.ranking.service.IRankingService"><rhs name\="kr.or.dw.ranking.service.RankingServiceImpl"/></lhs><lhs name\="kr.or.dw.lounge.service.ILoungeService"><rhs name\="kr.or.dw.lounge.service.LoungeServiceImpl"/></lhs><lhs name\="kr.or.dw.lounge.vo.GuserVO"><rhs name\="kr.or.dw.lounge.vo.GuserVO"/></lhs><lhs name\="kr.or.dw.member.vo.GBookVO"><rhs name\="kr.or.dw.member.vo.GBookVO"/></lhs></history>
+content_assist_number_of_computers=12
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=1
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=23
+spelling_ignore_ampersand_in_properties=true
+spelling_ignore_digits=true
+spelling_ignore_java_strings=true
+spelling_ignore_mixed=true
+spelling_ignore_non_letters=true
+spelling_ignore_sentence=true
+spelling_ignore_single_letters=true
+spelling_ignore_upper=true
+spelling_ignore_urls=true
+spelling_locale_initialized=true
+spelling_user_dictionary_encoding=UTF-8
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

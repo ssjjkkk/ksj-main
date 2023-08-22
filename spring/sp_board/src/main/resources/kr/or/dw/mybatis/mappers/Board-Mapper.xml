@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.or.dw.dao.BoardDAO">
+	
+	<sql id="search">
+		<if test="'t'.toString().equals(searchType)">
+			title LIKE '%' || #{keyword} || '%'
+		</if>
+		<if test="'c'.toString().equals(searchType)">
+			content LIKE '%' || #{keyword} || '%'
+		</if>
+		<if test="'w'.toString().equals(searchType)">
+			writer LIKE '%' || #{keyword} || '%'
+		</if>
+		<if test="'tcw'.toString().equals(searchType)">
+			title LIKE '%' || #{keyword} || '%' 
+			OR content LIKE '%' || #{keyword} || '%'
+			OR writer LIKE '%' || #{keyword} || '%'
+		</if>
+		<if test="'tc'.toString().equals(searchType)">
+			title LIKE '%' || #{keyword} || '%' 
+			OR content LIKE '%' || #{keyword} || '%'
+		</if>
+		<if test="'cw'.toString().equals(searchType)">
+			content LIKE '%' || #{keyword} || '%'
+			OR writer LIKE '%' || #{keyword} || '%'
+		</if>
+	</sql>
+	
+	<select id="selectSearchBoardList" resultType="board">
+		SELECT *
+		  FROM board
+		<where>
+		 	<include refid="search"/>
+		</where>
+		ORDER BY regdate desc
+	</select>
+	
+	<select id="selectSearchBoardListCount" resultType="int">
+		SELECT COUNT(*)
+		  FROM board
+		<where>
+		 	<include refid="search"/>
+		</where>		 
+	</select>
+	
+	<insert id="insertBoard" parameterType="board">
+		INSERT INTO board (
+						   bno
+						  ,title
+						  ,writer
+						  ,content
+						  ,regdate
+						  ,viewcnt
+						  )
+			VALUES (
+					board_seq.nextVal
+				   ,#{title}
+				   ,#{writer}
+				   ,#{content}
+				   ,SYSDATE
+				   ,0
+				   )
+	</insert>
+	
+	<select id="selectSearchBoard" parameterType="int" resultType="board">
+		SELECT *
+		  FROM board
+		 WHERE bno = #{bno}
+	</select>
+	
+	<update id="increaseViewCnt" parameterType="int">
+		UPDATE board SET viewcnt = viewcnt + 1 WHERE bno = #{bno}
+	</update>
+	
+	<update id="updateBoard" parameterType="board">
+		UPDATE board
+		   SET title		 = #{title}
+		      ,content		 = #{content}
+		      ,updatedate 	 = SYSDATE
+		 WHERE bno 			 = #{bno}
+	</update>
+
+	<delete id="deleteBoard" parameterType="int">
+		DELETE FROM board
+			  WHERE bno = #{bno}
+	</delete>
+
+</mapper>

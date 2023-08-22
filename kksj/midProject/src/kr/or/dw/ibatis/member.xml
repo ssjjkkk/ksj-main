@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="member">
+
+	<select id="getUserId" parameterClass="String" resultClass="String">
+		SELECT id FROM t_user WHERE id = #userid#
+	</select>
+	
+	<select id="userNick" parameterClass="String" resultClass="String">
+		SELECT nick FROM t_user WHERE nick = #nick#
+	</select>
+	
+	<insert id="insertMember" parameterClass="memberVO">
+		<selectKey keyProperty="user_no" resultClass="int">
+			SELECT t_user_seq.nextval user_no FROM dual
+		</selectKey>
+	
+		INSERT INTO t_user (
+							 user_no
+							,id
+							,pass
+							,nick
+							,profile
+							,auth_cd
+							,gb_del
+							,profile_txt
+							,gb_ben
+							)
+					VALUES (
+							 #user_no#
+							,#id#
+							,#pass#
+							,#nick#
+							,null
+							,null
+							,'N'
+							,null
+							,'N'
+							)
+	</insert>
+	
+	<select id="loginMember" parameterClass="String" resultClass="memberVo">
+		SELECT * FROM t_user WHERE id = #id#
+	</select>
+	
+	<select id="userInfoGet" parameterClass="int" resultClass="memberVo">
+		SELECT * FROM t_user WHERE user_no = #user_no#
+	</select>
+	
+	<update id="updateMemberPicPath" parameterClass="memberVo">
+		UPDATE t_user SET profile = #profile# WHERE user_no = #user_no#
+	</update>
+	
+	<update id="deleteMemberPicPath" parameterClass="int">
+		UPDATE t_user SET profile = null WHERE user_no = #user_no#
+	</update>
+	
+	<select id="selectNoticeList" resultClass="noticeVo">
+		SELECT n_no
+			  ,n_title
+			  ,n_wdt
+		  FROM notice
+		 WHERE gb_del = 'N'
+		 ORDER BY n_no DESC
+	</select>
+	
+	<update id="modProfile" parameterClass="memberVo">
+		UPDATE t_user SET profile_txt = #profile_txt# WHERE user_no = #user_no#
+	</update>
+
+	<select id="selectAdminList" resultClass="memberVo">
+		SELECT user_no, nick, profile
+		  FROM t_user
+		 WHERE gb_del = 'N'
+		   AND auth_cd = 1
+	</select>
+	
+	<select id="memcountBoard" parameterClass="int" resultClass="int">
+      SELECT COUNT(*) cnt
+        FROM t_board 
+       WHERE gb_del = 'N'
+       AND user_no = #user_no#
+   </select>
+
+   <select id="memcountReply" parameterClass="int" resultClass="int">
+      SELECT COUNT(*) cnt
+        FROM t_board_re
+       WHERE gb_del = 'N'
+       AND user_no = #user_no#
+    </select>
+    
+    <insert id="insertGB" parameterClass="gBVo">
+    	 <selectKey keyProperty="b_no" resultClass="int">
+         SELECT g_book_seq.nextval b_no FROM dual
+      	</selectKey>
+      
+      INSERT INTO
+         g_book (b_no, b_title, nick, b_content, b_wdt, gb_del)
+         VALUES (#b_no#, 'A', #nick#, #b_content#, sysdate, 'N')
+    </insert>
+
+	<select id="selectGBVo" parameterClass="int" resultClass="gBVo">
+		SELECT *
+		  FROM g_book
+		 WHERE gb_del = 'N'
+		   AND b_no = #b_no#
+	</select>
+	
+	<select id="selectGBList" parameterClass="String" resultClass="gBVo">
+		SELECT *
+		  FROM g_book
+		 WHERE gb_del = 'N'
+		   AND nick = #nick#
+	</select>
+	
+	
+	
+</sqlMap>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="admin">
+	
+	<select id="selectMember" resultClass="memberVo">
+		SELECT * FROM t_user WHERE gb_del = 'N'
+	</select> 
+	
+	<select id="selectSMember" parameterClass="String" resultClass="memberVo">
+		SELECT * FROM t_user WHERE gb_del = 'N' AND nick LIKE '%'||#search#||'%'
+	</select>
+	
+	
+	<select id="countMem" resultClass="int">
+		SELECT COUNT(*) cnt
+		  FROM t_user
+		 WHERE gb_del = 'N'
+	</select>
+	
+	<select id="countAdmin" resultClass="int">
+		SELECT COUNT(*) cnt
+		  FROM t_user
+		 WHERE gb_del = 'N'
+		   AND auth_cd = 1
+	</select>
+
+	<select id="memberSel" resultClass="memberVo" parameterClass="int">
+		SELECT * FROM t_user WHERE user_no = #user_no#
+	</select>
+	
+	<select id="selectNoticeList" resultClass="noticeVo">
+		SELECT n_no
+			  ,n_title
+			  ,nick
+		  FROM notice
+		 WHERE gb_del = 'N'
+		 ORDER BY n_no DESC
+	</select>
+	
+	<select id="selectNoticeView" parameterClass="int" resultClass="noticeVo">
+		SELECT *
+		  FROM notice
+		 WHERE gb_del = 'N'
+		   AND n_no = #n_no#
+	</select>
+	
+	<insert id="insertContent" parameterClass="noticeVo">
+		
+		<selectKey keyProperty="n_no" resultClass="int">
+			SELECT notice_seq.nextval n_no FROM dual
+		</selectKey>
+	
+		INSERT INTO
+			notice (
+						 n_no
+						,n_title
+						,nick
+						,n_content
+						,n_wdt
+						,gb_del
+					)
+			VALUES (
+						 #n_no#
+						,#n_title#
+						,#nick#
+						,#n_content#
+						,SYSDATE
+						,'N'
+					)		
+	</insert>
+	
+	<update id="updateNotice" parameterClass="noticeVo">
+		UPDATE notice
+		   SET n_title = #n_title#,
+			   n_content = #n_content#
+		 WHERE n_no = #n_no#
+	</update>
+	
+	<update id="deleteNotice" parameterClass="int">
+		UPDATE notice
+		   SET gb_del = 'Y'
+		 WHERE n_no = #n_no#
+	</update>
+	
+	<select id="selectFaqList" resultClass="faqVo">
+		SELECT f_no
+			  ,f_title
+			  ,nick
+			  ,f_content
+		  FROM faq
+		 WHERE gb_del = 'N'
+		 ORDER BY f_no DESC
+	</select>
+	
+	<select id="selectFaqView" parameterClass="int" resultClass="faqVo">
+		SELECT *
+		  FROM faq
+		 WHERE gb_del = 'N'
+		   AND f_no = #f_no#
+	</select>
+	
+	<update id="updateFaq" parameterClass="faqVo">
+		UPDATE faq
+		   SET f_title = #f_title#,
+			   f_content = #f_content#
+		 WHERE f_no = #f_no#
+	</update>
+	
+	<insert id="insertFContent" parameterClass="faqVo">
+		
+		<selectKey keyProperty="f_no" resultClass="int">
+			SELECT faq_seq.nextval f_no FROM dual
+		</selectKey>
+	
+		INSERT INTO
+			faq (
+						 f_no
+						,f_title
+						,nick
+						,f_content
+						,f_wdt
+						,gb_del
+					)
+			VALUES (
+						 #f_no#
+						,#f_title#
+						,#nick#
+						,#f_content#
+						,sysdate
+						,'N'
+					)		
+	</insert>
+	
+	<update id="deleteFaq" parameterClass="int">
+		UPDATE faq
+		   SET gb_del = 'Y'
+		 WHERE f_no = #f_no#
+	</update>
+	
+	<update id="benUser" parameterClass="int">
+		UPDATE t_user
+		   SET gb_ben = 'Y'
+		 WHERE user_no = #user_no#
+	</update>
+	
+	<update id="unBenUser" parameterClass="int">
+		UPDATE t_user
+		   SET gb_ben = 'N'
+		 WHERE user_no = #user_no#
+	</update>
+	
+	<update id="unDelUser" parameterClass="int">
+		UPDATE t_user
+		   SET gb_del = 'N'
+		 WHERE user_no = #user_no#
+	</update>
+	
+	<update id="delUser" parameterClass="int">
+		UPDATE t_user
+		   SET gb_del = 'Y'
+		 WHERE user_no = #user_no#
+	</update>
+	
+	<select id="countBoard" resultClass="int">
+      SELECT COUNT(*) cnt
+          FROM t_board 
+         WHERE gb_del = 'N'
+   </select>
+	
+</sqlMap>

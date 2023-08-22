@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//WebContent/WEB-INF/view/admin/header.jsp=UTF-8
+encoding//WebContent/WEB-INF/view/admin/index.jsp=UTF-8
+encoding//WebContent/WEB-INF/view/customer/faq.jsp=UTF-8
+encoding//WebContent/WEB-INF/view/customer/notice.jsp=UTF-8
+encoding//WebContent/WEB-INF/view/customer/sitemap.jsp=UTF-8
+encoding//WebContent/WEB-INF/view/lounge/_head.jsp=UTF-8
+encoding//WebContent/WEB-INF/view/lounge/_tail.jsp=UTF-8
+encoding//WebContent/WEB-INF/view/lounge/game.jsp=UTF-8
+encoding//WebContent/WEB-INF/view/lounge/image_upload.jsp=UTF-8
+encoding//WebContent/WEB-INF/view/lounge/write.jsp=UTF-8
+encoding//WebContent/WEB-INF/view/member/profile.jsp=UTF-8
+encoding//WebContent/WEB-INF/view/ranking/community.jsp=UTF-8
+encoding//src/kr/or/dw/web/uri_mapping.properties=UTF-8

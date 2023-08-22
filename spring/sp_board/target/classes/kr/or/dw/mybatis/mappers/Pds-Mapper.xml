@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.or.dw.dao.PdsDAO">
+	<insert id="insertPds" parameterType="pds">
+		INSERT INTO pds(pno, title, writer, content, regdate)
+		VALUES(pds_seq.nextval, #{title}, #{writer}, #{content}, SYSDATE)
+		<selectKey resultType="int" keyProperty="pno" order="AFTER">
+			SELECT pds_seq.currval FROM dual
+		</selectKey>
+	</insert>
+	
+	<sql id="search">
+		<if test="'t'.toString().equals(searchType)">
+			title LIKE '%' || #{keyword} || '%'
+		</if>
+		<if test="'c'.toString().equals(searchType)">
+			content LIKE '%' || #{keyword} || '%'
+		</if>
+		<if test="'w'.toString().equals(searchType)">
+			writer LIKE '%' || #{keyword} || '%'
+		</if>
+		<if test="'tcw'.toString().equals(searchType)">
+			title LIKE '%' || #{keyword} || '%' 
+			OR content LIKE '%' || #{keyword} || '%'
+			OR writer LIKE '%' || #{keyword} || '%'
+		</if>
+		<if test="'tc'.toString().equals(searchType)">
+			title LIKE '%' || #{keyword} || '%' 
+			OR content LIKE '%' || #{keyword} || '%'
+		</if>
+		<if test="'cw'.toString().equals(searchType)">
+			content LIKE '%' || #{keyword} || '%'
+			OR writer LIKE '%' || #{keyword} || '%'
+		</if>
+	</sql>
+	
+	<select id="selectSearchPdsList" resultType="pds">
+		SELECT *
+		  FROM pds
+		<where>
+		 	<include refid="search"/>
+		</where>
+		ORDER BY regdate desc
+	</select>
+	
+	<select id="selectSearchPdsListCount" resultType="int">
+		SELECT COUNT(*)
+		  FROM pds
+		<where>
+		 	<include refid="search"/>
+		</where>		 
+	</select>
+	
+	<select id="selectPdsByPno" parameterType="int" resultType="pds">
+		SELECT *
+		  FROM pds
+		 WHERE pno = #{pno}
+	</select>
+	
+	<update id="increaseViewCnt" parameterType="int">
+		UPDATE pds SET viewcnt = NVL(viewcnt, 0) + 1 WHERE pno = #{pno}
+	</update>
+	
+	<update id="updatePds" parameterType="pds">
+		UPDATE pds SET title		= #{title}
+					  ,content 		= #{content}
+					  ,updatedate 	= SYSDATE
+		 	WHERE pno = #{pno}
+	</update>
+	
+	<delete id="deletePds">
+		DELETE FROM pds WHERE pno = #{pno}
+	</delete>
+	
+	
+	
+	
+	
+	
+</mapper>

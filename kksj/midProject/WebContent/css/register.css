@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+.register {
+    height: calc(100vh - 63px)!important;
+}
+.register .card {
+    border: 0;
+    border-radius: 0px!important;
+    -webkit-box-shadow: 0 2px 30px 0 rgba(0,0,0,.06);
+    box-shadow: 0 2px 30px 0 rgba(0,0,0,.06);
+}
+.register input[type=password],
+.register input[type=text] {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: top;
+    border-radius: 0;
+    box-sizing: border-box;
+    -webkit-text-size-adjust: none;
+    touch-action: manipulation
+    font: 12px malgun gothic,"sans serif";
+    color: #17191d;
+    background-color: transparent
+}
+.register input[type=password],
+.register input[type=text] {
+    width: 100%;
+    height: 56px;
+    padding: 18px 12px;
+    border: 1px solid #e5e8eb;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    outline: 0;
+    transition: border-color .15s linear;
+}
+.register input[type=password]:focus,
+.register input[type=text]:focus {
+    border: 2px solid #d63338;
+    padding: 17px 11px;
+    transition: border-color .2s linear
+}
+.register input[type=password]::placeholder,
+.register input[type=text]::placeholder {
+    font-weight: 400;
+    color: #c7c8cc;
+    opacity: 1
+}
+.register input[type=text]::-ms-input-placeholder,
+.register input[type=password]::-ms-input-placeholder {
+    font-weight: 400;
+    color: #c7c8cc
+}
+.register input[type=password],
+.register input[type=text] {
+    font-family: pass,malgun gothic,"sans serif"
+}
+
+@media (-ms-high-contrast:none),screen and (-ms-high-contrast:active) {
+    .register input[type=password],
+    .register input[type=text] {
+        font-family: malgun gothic,"sans serif"
+    }
+}
+
+.register button {
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    font-family: NEXON Gothic Bold;
+    color: #fff;
+    background-color: #17191d;
+    transition: all .15s linear
+}
+
+.register button:active,
+.register button:hover {
+    outline: 0;
+    background-color: #d63338;
+    transition: all .2s linear
+}

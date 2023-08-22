@@ -1,0 +1,241 @@
+@charset "utf-8";
+
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+header.gnb {
+    display: block!important;
+    width: 100%;
+    min-width: 360px;
+    height: 63px;
+    color: #737881;
+    line-height: 1;
+    font: 12px malgun gothic,"sans serif";
+    border-bottom: 1px solid #dde1e5;
+    background-color: #fff;
+    z-index: 9999999;
+}
+header.gnb:after {
+    display: table;
+    clear: both;
+    content: " ";
+}
+header.gnb * {
+    transition: all ease 0.5s 0s;
+}
+header.gnb .container {
+    position: relative;
+}
+header.gnb .logo {
+    height: 62px;
+    text-align: center;
+}
+header.gnb .logo a {
+    display: inline-block;
+}
+header.gnb .logo img {
+    display: block;
+    height: 62px;
+    vertical-align: top;
+}
+header.gnb .gnbBarLeft {
+    height: 62px;
+    margin-top: -62px;
+    padding-left: 1px;
+}
+header.gnb .gnbAllmenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 107px;
+    height: 62px;
+}
+header.gnb .gnbAllmenu a {
+    display: block;
+    padding: 23px 23px 21px;
+    *padding: 20px 23px 21px;
+    font: 16px 'Nanum Gothic';
+    color: #737881;
+    text-decoration: none;
+}
+header.gnb .gnbIcon {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    background: transparent url(//rs.nxfs.nexon.com/gnb/images/set_gnb.png) 0 0 no-repeat;
+}
+header.gnb .gnbIcon {
+    width: 18px;
+    height: 16px;
+    margin: 1px 11px 0 0;
+    *margin-top: 4px;
+    background-color: #17191d;
+    transition: all .15s linear;
+}
+header.gnb .text {
+    display: inline-block;
+    vertical-align: top;
+    font-weight: 700;
+}
+header.gnb .gnbBarRight {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 62px;
+    padding-right: 11px;
+    text-align: right;
+}
+header.gnb .member-info {
+    display: inline-block;
+    zoom: 1;
+    position: relative;
+    z-index: 20;
+    margin-top: 11px;
+}
+header.gnb .member-info .btn-basic {
+    border: 1px solid #ccc;
+    font: 0.95rem 'Nanum Gothic';
+    font-weight: 700;
+    padding: 10px 15px;
+}
+.gnbAllLayer {
+}
+.gnbAllLayer .gnbTitle {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.gnbAllLayer .gnbTitle h2 {
+    margin: 0;
+    padding: 17px;
+    font: 1.55rem 'Nanum Gothic';
+    font-weight: 700;
+}
+.gnbAllLayer .gnbList {
+    display: block;
+    padding: 75px 0 50px 42px;
+    margin-top: -75px;
+}
+.gnbAllLayer .gnbList .gnbCell {
+    display: inline-table;
+    zoom: 1;
+    *display: inline;
+    width: 170px;
+}
+.gnbAllLayer .gnbList h3 {
+    height: 50px;
+    *height: 26px;
+    padding-top: 24px;
+    color: #17191d;
+    font: 14px 'Nanum Gothic';
+    font-weight: 700;
+}
+.gnbAllLayer .gnbList h3 a {
+    color: #17191d;
+}
+.gnbAllLayer .gnbList ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.gnbAllLayer .gnbList li {
+    min-height: 24px;
+    *min-height: 16px;
+    padding-bottom: 8px;
+}
+.gnbAllLayer .gnbList a {
+    color: #737881;
+    letter-spacing: -.3px;
+    text-decoration: none;
+}
+.gnbAllLayer .gnbLayerBt {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.gnbAllLayer .gnbLayerBt a {
+    display: block;
+    padding: 23px;
+}
+.gnbAllLayer .gnbIcon {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    background: transparent url(//rs.nxfs.nexon.com/gnb/images/set_gnb.png) 0 0 no-repeat;
+}
+.gnbAllLayer .gnbLayerBt .gnbIcon {
+    width: 18px;
+    height: 18px;
+    background-position: 0 -50px;
+    background-color: #17191d;
+    transition: all .15s linear;
+}
+.gnbAllLayer .gnbMyLayer {
+    width: 100%;
+    height: 100%;
+    margin: 62px 0 166px;
+    visibility: visible;
+    background-color: #fff;
+    border-top: 1px solid #dde1e5;
+    overflow-y: auto;
+}
+.gnbAllLayer .gnbMyLayer::-webkit-scrollbar {
+    width: 10px;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+.gnbAllLayer .gnbMyLayer:hover::-webkit-scrollbar-thumb {
+    background-color: #fff!important;
+    border-radius: 5px;
+    background-clip: padding-box;
+    border: 2px solid #dde1e5;
+}
+.gnbAllLayer .gnbMyLayer:hover::-webkit-scrollbar-track {
+    background-color: #fff!important;
+    border-radius: 0;
+}
+.gnbAllLayer .gnbListService {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 166px;
+    background-color: #222426;
+    overflow: hidden;
+}
+.gnbAllLayer .gnbListService ul {
+    height: 100px;
+    padding: 30px 0 0 33px;
+}
+.gnbAllLayer .gnbListService li {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    width: 180px;
+    height: 35px;
+    padding-left: 15px;
+}
+.gnbAllLayer .gnbListService a {
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+}
+.gnbAllLayer .gnbListService .gnbBtAll {
+    display: block;
+    height: 50px;
+    padding-top: 17px;
+    text-align: center;
+    font-family: MalgunGothic;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -.3px;
+    color: #fff;
+    background-color: #17191d;
+}

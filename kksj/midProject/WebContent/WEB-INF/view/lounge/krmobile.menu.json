@@ -1,0 +1,19 @@
+{
+    "menu":{
+        "새소식":[
+            {"네이버":"board", "1123"},
+            {"11":"link", "htttp://swqernjkwe.com/"},
+            {"11":"board.do?app_id=krmobile&title="}
+        ],
+        "22":[
+            {"22":"board.do?app_id=krmobile&title=/b1.html"}
+        ],
+        "33":[
+            {"33":"board.do?app_id=krmobile&title="},
+            {"33":"/c2.html"},
+            {"33":"/c3.html"},
+            {"33":"/c4.html"}
+        ]
+    }
+}
+ 

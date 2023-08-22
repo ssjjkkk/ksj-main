@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="ranking">
+	
+	<select id="selectGameList" resultClass="gameVo">
+		SELECT * FROM game
+	</select>
+	
+	<select id="selectGameHList" resultClass="GameVo">
+      SELECT *
+        FROM game
+      ORDER BY g_like DESC
+   </select>
+   
+   <select id="selectGameJList" resultClass="GameVo">
+      SELECT *
+        FROM game
+      ORDER BY g_user DESC
+   </select>
+	
+</sqlMap>
